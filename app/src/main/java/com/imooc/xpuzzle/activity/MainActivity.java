@@ -165,7 +165,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 Intent intent = new Intent(
                         MainActivity.this,
                         PuzzleMain.class);
-                intent.putExtra("picPath", imagePath);
+                intent.putExtra("mPicPath", imagePath);
                 intent.putExtra("mType", mType);
                 cursor.close();
                 startActivity(intent);
@@ -213,13 +213,18 @@ public class MainActivity extends Activity implements OnClickListener {
         mGvPicList = (GridView) findViewById(
                 R.id.gv_xpuzzle_main_pic_list);
         // 初始化Bitmap数据
-        mResPicId = new int[]{
+    /*    mResPicId = new int[]{
                 R.drawable.pic1, R.drawable.pic2, R.drawable.pic3,
                 R.drawable.pic4, R.drawable.pic5, R.drawable.pic6,
                 R.drawable.pic7, R.drawable.pic8, R.drawable.pic9,
                 R.drawable.pic10, R.drawable.pic11, R.drawable.pic12,
                 R.drawable.pic13, R.drawable.pic14,
-                R.drawable.pic15, R.mipmap.ic_launcher};
+                R.drawable.pic15, R.mipmap.ic_launcher};*/
+        mResPicId=new int[]{
+                R.mipmap.m1, R.mipmap.m2, R.mipmap.m3,
+                R.mipmap.m4, R.mipmap.m5, R.mipmap.m6,
+                R.mipmap.m7, R.mipmap.m8, R.mipmap.ic_launcher,
+        };
         Bitmap[] bitmaps = new Bitmap[mResPicId.length];
         for (int i = 0; i < bitmaps.length; i++) {
             bitmaps[i] = BitmapFactory.decodeResource(
